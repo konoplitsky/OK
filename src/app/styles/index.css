@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  color: black;
+  --colorButtonText: #FFFFFF;
+
+  --primaryButton: #FF7700;
+  --primaryButtonHover: 12%;
+  --primaryButtonPressed: 20%;
+
+  --secondaryButton: #8366561F;
+
+  --primaryCounter: #2FB675;
+  --secondaryCounter: #8366561F;
+
+  -timing-function: cubic-bezier(0, -0.3, 0.5, 1.3);
+  transition-duration: 500ms;
+}
