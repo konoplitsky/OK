@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import { Button } from '@/components/Button';
+import { Counter } from '@/components/Counter';
 
 export const App = () => {
   const [count, setCount] = useState(0);
@@ -18,6 +19,7 @@ export const App = () => {
 
   return (
     <div className='app'>
+      <Counter quantity='прив' />
       <Button
         counter={isCounter}
         loading={isLoading}
