@@ -1,0 +1,23 @@
+.label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.small {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.medium {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.large {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 24px;
+}

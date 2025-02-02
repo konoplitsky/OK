@@ -1,0 +1,40 @@
+.loaderContainer {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .loader {
+    animation: rotation 3s linear infinite;
+    width: var(--loader-size);
+    height: var(--loader-size);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.small {
+  --loader-size: 16px;
+}
+
+.medium {
+ --loader-size: 20px;
+}
+
+.large {
+  --loader-size: 24px;
+}

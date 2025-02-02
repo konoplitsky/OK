@@ -4,19 +4,24 @@
   box-sizing: border-box;
 }
 
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
 :root {
-  color: black;
-  --colorButtonText: #FFFFFF;
+  --primaryText: #FFFFFF;
+  --secondaryText: #2E2F33;
 
   --primaryButton: #FF7700;
-  --primaryButtonHover: 12%;
-  --primaryButtonPressed: 20%;
-
   --secondaryButton: #8366561F;
+
+  --shadowPrimary: rgba(255, 255, 255, 0.12);
+  --shadowSecondary: rgba(131, 102, 86, 0.12);
 
   --primaryCounter: #2FB675;
   --secondaryCounter: #8366561F;
-
-  -timing-function: cubic-bezier(0, -0.3, 0.5, 1.3);
-  transition-duration: 500ms;
 }

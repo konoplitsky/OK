@@ -1,0 +1,58 @@
+.button {
+  position: relative;
+  padding: 8px 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s, opacity 0.2s;
+
+  &:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--hoverBackground);
+    border-radius: var(--borderRadius);
+    opacity: 0.12;
+    pointer-events: none;
+  }
+
+  &:disabled {
+    opacity: 0.36;
+  }
+}
+
+.primary {
+  --hoverBackground: var(--primaryText);
+  background: var(--primaryButton);
+  color: var(--primaryText);
+}
+
+.secondary {
+  --hoverBackground: var(--secondaryText);
+  background: var(--secondaryButton, #555);
+  color: var(--secondaryText);
+}
+
+.small {
+  --loader-size: 16px;
+  --borderRadius: 9.3px;
+  border-radius: var(--borderRadius);
+  padding: 6px 10px;
+}
+
+.medium {
+  --loader-size: 20px;
+  --borderRadius: 12px;
+  border-radius: var(--borderRadius);
+  padding: 8px 12px;
+}
+
+.large {
+  --borderRadius: 16px;
+  border-radius: var(--borderRadius);
+  padding: 16px;
+}

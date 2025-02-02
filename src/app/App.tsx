@@ -1,31 +1,38 @@
 import { useState } from 'react';
-import { Button } from '../ui/Button/Button.tsx';
 
-function App() {
+import { Button } from '@/components/Button';
+
+export const App = () => {
   const [count, setCount] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isCounter, setIsCounter] = useState(false);
+
+  const handleClick = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setCount((prev) => prev + 1);
+      setIsCounter(true);
+      setIsLoading(false);
+    }, 1000);
+  };
 
   return (
-    <>
-      <div>
-        <a href='https://vite.dev' target='_blank'></a>
-        <a href='https://react.dev' target='_blank'></a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className='card'>
-        <Button
-          size='medium'
-          counter={true}
-          label='Что сделать'
-          count={count}
-          onClick={() => setCount((count) => count + 1)}
-        />
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className='read-the-docs'>Click on the Vite and React logos to learn more</p>
-    </>
+    <div className='app'>
+      <Button
+        counter={isCounter}
+        loading={isLoading}
+        size='large'
+        variant='secondary'
+        onClick={handleClick}
+        // disabled
+        // style={{ width: 100 }}
+      >
+        <Button.Group>
+          <Button.Label>Что сделать</Button.Label>
+          <Button.Count count={count} />
+        </Button.Group>
+        <Button.Loader />
+      </Button>
+    </div>
   );
-}
-
-export default App;
+};

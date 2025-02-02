@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hideContent {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.small {
+  gap: 4px;
+}
+
+.medium {
+  gap: 6px
+}
+
+.large {
+  gap: 8px
+}
