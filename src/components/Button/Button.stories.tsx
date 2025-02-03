@@ -34,6 +34,18 @@ export const Secondary: Story = {
   }
 };
 
+export const Disabled: Story = {
+  args: {
+    variant: 'primary',
+    disabled: true,
+    children: (
+      <Button.Group>
+        <Button.Label>Что сделать</Button.Label>
+      </Button.Group>
+    )
+  }
+};
+
 export const LabelWithCounter: Story = {
   args: {
     variant: 'primary',

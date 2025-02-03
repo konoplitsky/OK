@@ -40,6 +40,7 @@ export const Button = (props: ButtonProps) => {
   return (
     <ButtonContext.Provider value={value}>
       <button
+        data-testid='button'
         className={cn(styles.button, styles[variant], styles[size], className)}
         type='button'
         {...rest}

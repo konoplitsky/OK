@@ -1,4 +1,4 @@
-import LoaderPRimaryIcon from '@/assets/icons/loader.svg?react';
+import LoaderPrimaryIcon from '@/assets/icons/loaderPrimary.svg?react';
 import LoaderSecondaryIcon from '@/assets/icons/loaderSecondary.svg?react';
 import { cn } from '@/lib/cn.ts';
 
@@ -10,12 +10,12 @@ export const Loader = () => {
   const { loading, size, variant } = useButtonContext();
 
   return (
-    <div className={cn(styles[size])}>
+    <div data-testid='loader' className={cn(styles[size])}>
       {loading && (
         <div className={styles.loaderContainer}>
           {
             {
-              primary: <LoaderPRimaryIcon className={styles.loader} />,
+              primary: <LoaderPrimaryIcon className={styles.loader} />,
               secondary: <LoaderSecondaryIcon className={styles.loader} />
             }[variant]
           }
