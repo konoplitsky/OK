@@ -19,7 +19,7 @@ export const App = () => {
 
   return (
     <div className='app'>
-      <Counter quantity='прив' />
+      <Counter quantity={100} size='xl' />
       <Button
         counter={isCounter}
         loading={isLoading}

@@ -1,4 +1,5 @@
 import { cn } from '@/lib/cn.ts';
+import { formatQuantity } from '@/lib/formatQuantity.ts';
 
 import styles from './Counter.module.css';
 
@@ -9,7 +10,6 @@ interface CounterProps {
   size?: CounterSize;
   variant?: CounterVariant;
   className?: string;
-  stoke?: boolean;
   quantity: string | number;
   pulse?: boolean;
 }
@@ -19,7 +19,7 @@ export const Counter = (props: CounterProps) => {
 
   return (
     <div className={cn(styles.counter, styles[size], styles[variant], className)}>
-      <span className={styles.count}> {quantity}</span>
+      <span className={styles.count}>{formatQuantity(quantity)}</span>
       {pulse && (
         <>
           <div className={styles.dot}></div>
